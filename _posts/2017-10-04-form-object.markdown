@@ -134,4 +134,6 @@ Here the ``save`` method first executes the validation process with ``valid?`` m
 
 
 # Conclusion
-Overall the ``RegistrationForm`` object acts as a orchestrator and directs multiple actions just like an orchestrator, which is its single responsibility i.e to orchestrate. What makes form objects better than nested attributes is its explicitness, which makes the code easy to follow.
+Overall the ``RegistrationForm`` object acts as a orchestrator and directs multiple actions just like an orchestrator, which is its single responsibility i.e to orchestrate.
+
+What makes form objects better than nested attributes is its explicitness, which makes the code easy to follow.
