@@ -4,26 +4,13 @@ title:  "Removing clutter from your controller with Form Object"
 date:   2017-10-04 00:45:55 +1100
 categories: design patterns
 ---
-Form object is a simple ruby object that can help reduce the clutter in your controllers and models.
+Form object is a simple ruby object that can help reduce the clutter in your controllers when creating a form that deals with many models.
 
-The conventional Controllers create action is something like:
+Alternative to form object is nested attributes, which I believe, because of it's implicitness is not an ideal solution.
 
-{% highlight ruby %}
-class UsersController < ApplicationController
-  def create
-    @user = User.new(params[:user])
+A registration form for example, can have fields for user_name, email and address, and let's say you want to save the user_name in the `users` table and address in `address` table.
 
-    if @user.save
-    #=>redirect and flash message
-    else
-      render :new
-    end
-  end
-end
-{% endhighlight %}
-
-but there can be cases where your controller will have to do a lot more then simply saving the corresponding model.
-for example look at the following controller.
+With this requirements our controller will look something like:
 
 {% highlight ruby %}
 class UsersController < ApplicationController
@@ -145,4 +132,6 @@ end
 
 Here the ``save`` method first executes the validation process with ``valid?`` method provided by ``ActiveModel::Model``. This validate the attributes, similar to what Active Record validation does. If the attributes are valid, other models are created and actions are performed.
 
-Overall the ``RegistrationForm`` object acts as a orchestrator and directs multiple actions just like an orchestrator, which is its single responsibility i.e to orchestrate.
+
+# Conclusion
+Overall the ``RegistrationForm`` object acts as a orchestrator and directs multiple actions just like an orchestrator, which is its single responsibility i.e to orchestrate. What makes form objects better than nested attributes is its explicitness, which makes the code easy to follow.
