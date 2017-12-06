@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Removing clutter from your controller with Form Object"
-date:   2017-10-04 00:45:55 +1100
-categories: design patterns
+date:   2017-09-04 00:45:55 +1100
+categories: design-patterns
 ---
 Form object is a simple ruby object that can help reduce the clutter in your controllers when creating a form that deals with many models.
 
