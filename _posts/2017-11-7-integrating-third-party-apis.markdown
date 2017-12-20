@@ -1,5 +1,6 @@
 ---
 layout: post
+comments: true
 title:  "Integrating 3rd party APIs using Wrapper objects"
 date:   2017-11-07 10:12:10 +1100
 categories: refactoring
@@ -73,3 +74,9 @@ By wrapping the Github's API in our own GithubWrapper class we are isolating the
 The benefit of this isolation is that it makes our application easy to maintain by embracing change.
 
 For example: In the future if Github makes some changes to its interfaces, we will have to go to only one place i.e. the ```GithubWrapper``` class in order to make changes, rather than having to find and change Github's interfaces all over our application.
+
+
+<!-- Post comments -->
+<div class="comments">
+  {% include disqus.html %}
+</div>
