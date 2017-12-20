@@ -118,3 +118,9 @@ different way in the view. It encapsulates the view logic associated with a doma
 the view logic from domain logic thereby maintaining single responsibility principle.
 
 You don’t have to roll your own Decorator objects like I did in this article, instead you can use <a href="https://github.com/drapergem/draper" target="_blank">draper</a> gem, which makes it easy to create Decorator objects.
+
+
+<!-- Post comments -->
+<div class="comments">
+  {% include disqus.html %}
+</div>
