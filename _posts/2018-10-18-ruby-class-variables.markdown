@@ -115,3 +115,7 @@ In the above code the total_count of MountainBike is 3 because we have create 3 
 And since now the CityBike maintains its own total_count, the CityBikes total_count is 0, because we haven't created any new CityBikes yet.
 
 
+<!-- Post comments -->
+<div class="comments">
+  {% include disqus.html %}
+</div>
